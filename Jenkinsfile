@@ -1,10 +1,8 @@
 pipeline {
-    agent any
-    
+    agent any 
     tools{
       jdk 'JDK17'
-      maven 'maven4'
-        
+      maven 'maven4'    
     }
 
     stages {
@@ -19,7 +17,6 @@ pipeline {
                sh "mvn compile"
             }
         }
-        
           stage('Test') {
             steps {
                sh "mvn test"
