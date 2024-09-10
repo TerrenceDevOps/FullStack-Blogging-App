@@ -1,10 +1,8 @@
 pipeline {
-    agent any
-    
+    agent any  
     tools{
       jdk 'JDK17'
-      maven 'maven4'
-        
+      maven 'maven4'     
     }
 
     stages {
@@ -12,8 +10,7 @@ pipeline {
             steps {
                 git branch: 'main', url: 'https://github.com/TerrenceDevOps/FullStack-Blogging-App.git'
             }
-        }
-        
+        }    
         stage('Compile') {
             steps {
                sh "mvn compile"
